@@ -1,0 +1,31 @@
+/* Updated Solution based on two pointer approach, which makes use of the sorted array and completes the function in O(N) Time Complexity */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+pair<int , int> closestSum(vector<int> arr, int x){
+    // your code goes here
+    
+    pair<int,int> pair1;
+    
+    int diff = 2147483647;
+
+    int start = 0;
+    int end = arr.size()-1;
+    
+    while(end > start)
+    {
+        if(abs(arr[start]+arr[end]-x)<diff)
+        {
+           pair1.first = arr[start];
+           pair1.second = arr[end];
+          diff = abs(arr[start]+arr[end]-x);
+        }
+        
+
+        //Since this is a sorted array
+        (arr[start]+arr[end])>x?end--:start++;
+        
+    }
+    return pair1;
+}
