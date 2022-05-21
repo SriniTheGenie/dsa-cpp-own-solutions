@@ -1,4 +1,4 @@
-/* Here in I have not taken into use the quality of the array being sorted which has lead to somewhat an inefficient solution */
+/* Here in I have not taken into use the quality of the array being sorted which has lead to somewhat an inefficient solution with O(N^2) Time Complexity */
 
 #include<bits/stdc++.h>
 using namespace std;
