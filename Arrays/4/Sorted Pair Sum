@@ -1,3 +1,5 @@
+/* Here in I have not taken into use the quality of the array being sorted which has lead to somewhat an inefficient solution */
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -6,7 +8,7 @@ pair<int , int> closestSum(vector<int> arr, int x){
     
     pair<int,int> pair1;
     
-    int diff = 2147483647;
+    int diff = INT_MAX;
     
     for(int i=0;i<arr.size();i++)
     {
