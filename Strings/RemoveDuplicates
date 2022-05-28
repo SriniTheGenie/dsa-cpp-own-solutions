@@ -1,0 +1,16 @@
+//Expected Time Complexity : O(N)
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+string removeDuplicate(string s){
+    // your code goes here
+    set<char> updated(s.begin(),s.end());
+    
+    s.clear();
+    for (auto ch:updated)
+        s.push_back(ch);
+
+    return s;
+}
