@@ -1,4 +1,5 @@
-//O(logN)
+//Expected Time Complexity: O(logN)
+//Hint: Binary Search
 
 #include<bits/stdc++.h>
 using namespace std;
