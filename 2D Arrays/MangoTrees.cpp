@@ -37,7 +37,4 @@ vector<vector<int>> create_AM(vector<vector<int>> trees,int Ncom)
         }
     }
     return M;
-    
-    
-    
 }
