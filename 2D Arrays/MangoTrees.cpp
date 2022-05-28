@@ -38,3 +38,46 @@ vector<vector<int>> create_AM(vector<vector<int>> trees,int Ncom)
     }
     return M;
 }
+int main()
+{
+    vector<vector<int>> trees
+    {
+        {0,1,1,0,0,0},
+        {1,0,0,1,1,0},
+        {0,1,0,0,0,0},
+        {0,1,1,0,0,1},
+        {1,0,0,1,1,0},
+        {0,1,0,0,0,0}
+    };
+    
+    int Ncom = trees.size();
+    vector<vector<int>> M(Ncom,vector<int> (Ncom));
+    
+    int s1,s2,s3,s4;
+    
+    int min_s1s2s3s4;
+    int rahul_part = 0;
+    
+    M = create_AM(trees,Ncom);
+    
+
+    for(int x=0;x<trees.size();x++)
+    {
+        for(int y=0;y<trees.size();y++)
+        {
+            s1 = M[x][y];
+            s2 = M[x][Ncom - 1] - M[x][y];
+            s3 = M[Ncom - 1][y] - M[x][y];
+            s4 = M[Ncom-1][Ncom-1] - (s1+s2+s3);
+            
+            min_s1s2s3s4 = min(s1,s2);
+            min_s1s2s3s4 = min(min_s1s2s3s4, s3);
+            min_s1s2s3s4 = min(min_s1s2s3s4,s4);
+            
+            rahul_part = max(rahul_part, min_s1s2s3s4);
+        }
+    }
+    cout<<endl;
+    cout<<"rahul_part = "<<rahul_part<<endl;
+    return 0;
+}
