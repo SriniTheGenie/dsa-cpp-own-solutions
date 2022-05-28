@@ -1,3 +1,6 @@
+//Expected Time Complexity: O(N)
+//Hint: Two Pointer Approach
+
 /* Updated Solution based on two pointer approach, which makes use of the sorted array and completes the function in O(N) Time Complexity */
 
 #include<bits/stdc++.h>
