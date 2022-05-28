@@ -1,4 +1,5 @@
-/* Kadane's Algorithm */
+//Expected Time Complexity: O(N)
+/*Hint: Kadane's Algorithm */
 
 #include<bits/stdc++.h>
 using namespace std;
